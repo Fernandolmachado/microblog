@@ -6,6 +6,7 @@ from app import app
 from app.forms import LoginForm
 from app.models import User
 
+
 @app.route("/")
 @app.route("/index")
 @login_required
@@ -21,6 +22,7 @@ def index():
         }
     ]
     return render_template("index.html", title="Home", posts=posts)
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
